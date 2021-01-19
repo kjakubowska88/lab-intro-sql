@@ -23,9 +23,10 @@ select title from film;
 select Distinct(Name) as Language from language;
 -- 5--
 select Count(*) from store;
+select count(store_id) from store;
 select count(*) from staff;
 
 select first_name from staff;
 -- 6.--
 select * from rental;
-select COUNT(rental_date) from rental;
+select distinct date_format(convert(rental_date,date), '%Y-%m-%d') from rental;
