@@ -29,4 +29,4 @@ select count(*) from staff;
 select first_name from staff;
 -- 6.--
 select * from rental;
-select distinct date_format(convert(rental_date,date), '%Y-%m-%d') from rental;
+select distinct date(rental_date) As rental_date from rental;
